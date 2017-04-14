@@ -310,6 +310,11 @@ will tell you how many jobs were actually kicked alive again::
     >>> beanstalk.kick(42)
     0
 
+You can also kick a single job by it's ``id``. ``kick_job`` will return 'Kicked' on 
+success or 'NOT_FOUND' if the job was not found::
+    >>> beanstalk.kick_job(42)
+    'Kicked'
+
 
 Inspecting Jobs
 ---------------
